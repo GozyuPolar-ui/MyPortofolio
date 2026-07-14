@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import HireBadge from "./HireBadge";
 
 const Hero = () => {
   return (
@@ -49,26 +50,27 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="relative flex justify-center items-center group h-full"
+          className="flex justify-center"
         >
-          <div className="absolute w-64 h-64 bg-cyan-400/30 dark:bg-cyan-400/20 rounded-full blur-3xl" />
-          <div className="absolute w-48 h-48 bg-orange-400/20 dark:bg-orange-500/20 rounded-full blur-2xl translate-x-10 -translate-y-6" />
+          <div className="relative inline-block">
+            <div className="absolute w-64 h-64 bg-cyan-400/30 dark:bg-cyan-400/20 rounded-full blur-3xl -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute w-48 h-48 bg-orange-400/20 dark:bg-orange-500/20 rounded-full blur-2xl -z-10 translate-x-10 -translate-y-6" />
 
-          <motion.div
-  className="relative"
-  animate={{ y: [0, -14, 0] }}
-  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
->
-            <Image
-              src="/images/hero-visual.png"
-              alt="Hero visual"
-              width={500}
-              height={500}
-              quality={100}
-              className="w-full max-w-md h-auto relative z-10 transition-transform duration-300 group-hover:scale-105"
-              priority
-            />
-          </motion.div>
+            <motion.div
+              animate={{ y: [0, -14, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <Image
+                src="/images/hero-visual.png"
+                alt="Hero visual"
+                width={500}
+                height={500}
+                quality={100}
+                className="w-full max-w-md h-auto relative transition-transform duration-300 hover:scale-105"
+                priority
+              />
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>

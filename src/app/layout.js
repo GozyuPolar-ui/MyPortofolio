@@ -4,6 +4,7 @@ import { ThemeContextProvider } from "@/context/theme-context";
 import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
+import HireBadge from "@/components/HireBadge";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -12,8 +13,46 @@ const orbitron = Orbitron({
 });
 
 export const metadata = {
-  title: "Tony — Portfolio",
-  description: "Personal portfolio of Tony, builder of systems.",
+  title: {
+    default: "Raymond — Builder of Systems",
+    template: "%s | Raymond",
+  },
+  description:
+    "Self-taught developer building AI assistants, programming languages, and full-stack systems from scratch. Creator of E.D.I.T.H. and Jarvis-Lang.",
+  keywords: [
+    "Raymond",
+    "ByRaymond",
+    "software developer",
+    "AI assistant developer",
+    "E.D.I.T.H.",
+    "Jarvis-Lang",
+    "Next.js portfolio",
+    "Python developer",
+    "self-taught programmer",
+    "Indonesia developer",
+  ],
+  authors: [{ name: "Tony" }],
+  creator: "Tony",
+ metadataBase: new URL("https://my-portofolio-rho-lovat.vercel.app"),
+  openGraph: {
+    title: "Raymond — Builder of Systems",
+    description:
+      "Self-taught developer building AI assistants, programming languages, and full-stack systems from scratch.",
+    url: "https://my-portofolio-rho-lovat.vercel.app",
+    siteName: "Raymond's Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Raymond — Builder of Systems",
+    description:
+      "Self-taught developer building AI assistants, programming languages, and full-stack systems from scratch.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -28,6 +67,7 @@ export default function RootLayout({ children }) {
           <ScrollProgress />
           <Navbar />
           {children}
+          <HireBadge />
         </ThemeContextProvider>
       </body>
     </html>

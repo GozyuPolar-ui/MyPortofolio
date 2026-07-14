@@ -48,11 +48,16 @@ const About = () => {
             of: how do I build my own version of that? Not a toy, something
             that actually listens, remembers, and does things.
           </p>
-          <p className="text-gray-600 dark:text-gray-300">
-            That question is basically why E.D.I.T.H. and Jarvis-Lang exist.
-            Both started as a blank file and the same stubborn idea — if it
-            doesn&apos;t exist yet, build it yourself.
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
+            That&apos;s shown up as an AI assistant with its own memory and
+            voice, and a programming language with its own grammar. Both
+            started as a blank file and a rough idea.
           </p>
+
+          <a href="/cv-tony.pdf" download className="inline-flex items-center gap-1.5 text-sm text-gray-700 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 border-b border-gray-400 dark:border-gray-600 hover:border-cyan-400 transition-colors pb-0.5">
+            Get in touch
+            <span className="text-xs">↓</span>
+          </a>
         </motion.div>
 
         <motion.div
